@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "New Car Sales by State in Australia (May 2025)",
+  "width": 800,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/australian-states.json",
+    "format": {"type": "json", "property": "features"}
+  },
+  "projection": {"type": "albers",
+  "rotate": [-132.8906, 0, 0],
+  "center": [0, -27.4422],
+  "parallels": [-39.2069, -15.6778],
+  "scale": 1000},
+  "transform": [
+    {
+      "lookup": "properties.STATE_NAME",
+      "from": {
+        "data": {
+        "values": [
+          {"State":"Australian Capital Territory","Sales":1413},
+          {"State":"New South Wales","Sales":32177},
+          {"State":"Northern Territory","Sales":871},
+          {"State":"Queensland","Sales":22924},
+          {"State":"South Australia","Sales":6596},
+          {"State":"Tasmania","Sales":1549},
+          {"State":"Victoria","Sales":28671},
+          {"State":"Western Australia","Sales":11084}
+    ]
+  },
+  "key": "State",
+  "fields": ["Sales"]
+      }
+    }
+  ],
+      "mark": {"type": "geoshape"},
+    "encoding": {
+    "color": {
+    "field": "Sales",
+    "type": "quantitative",
+    "scale": {"type": "linear"}
+    },
+    "tooltip": [
+    {"field": "properties.STATE_NAME", "type": "nominal", "title":
+    "State"},
+    {"field": "Sales", "type": "quantitative"}
+    ]
+    }
+  }
