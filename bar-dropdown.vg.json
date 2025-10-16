@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {"text": "Top 10 Most Popular Car Brands in Australia"},
   "width": 600,
   "height": 600,
   "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/salesbybrand.csv"}, // data url goes here
@@ -32,6 +33,5 @@
           "text": {"value": "Toyota is the most popular brand in Australia"}
         }
     }
-  ],
-  "title": {"text": "Top 10 Most Popular Car Brands in Australia"}
+  ]
 }

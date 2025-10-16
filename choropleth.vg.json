@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "New Car Sales by State in Australia (May 2025)",
+  "title": "New Car Sales by State in Australia",
   "width": 600,
   "height": 600,
   "data": {

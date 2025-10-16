@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {"text": "Australian Car Sales Over Time"},
   "width": 600,
   "height": 600,
   "data": {"url": //data url goes here},

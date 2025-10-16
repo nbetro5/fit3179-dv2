@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {"text": "Sales by Powerplant"},
   "width": 600,
   "height": 600,
   "data": {"url": //data source goes here},
@@ -24,6 +25,5 @@
       }
     }
   }
-},
-"title": "Vehicle Sales by Powerplant"
+}
 }

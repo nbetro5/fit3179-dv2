@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {"text": "Sales by Country of Origin"},
   "width": 600,
   "height": 600,
   "layer": [

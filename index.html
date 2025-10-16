@@ -13,28 +13,30 @@
     h1 {
       text-align: center;
       font-size: 60px;
+      font-weight: "bold";
       margin-bottom: 40px;
     }
     h2 {
         text-align: center;
         margin-bottom: 20px;
         font-size: 36px;
+        font-weight: "bold";
     }
     .poster-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, auto);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
       gap: 30px;
     }
 
     .grid-cell {
-      background-color: #fff;
+      background-color: #00aeff;
       border: 1px solid #000000;
       padding: 15px;
     }
 
     .title-cell {
-      background-color: #fff;
+      background-color: #00aeff;
     }
 
     .plot {
@@ -45,7 +47,12 @@
 
     .description {
       font-size: 14px;
-      color: #333;
+      color: #000000;
+    }
+    .emphasis {
+      font-size: 14px;
+      color: #9e0d0d;
+      font-weight: "bold";
     }
   </style>
 </head>
@@ -59,37 +66,37 @@
     
     <div class="grid-cell">
       <div id="map" class="plot"></div>
-      <p class="description">Talk about choropleth map here</p>
+      <p class="description">Talk about <p class = "emphasis">choropleth map</p>here</p>
     </div>
 
     
     <div class="grid-cell">
       <div id="pie" class="plot"></div>
-      <p class="description">Talk about pie chart here</p>
+      <p class="description">Talk about <p class = "emphasis">pie chart</p> here</p>
     </div>
 
     
     <div class="grid-cell">
       <div id="line" class="plot"></div>
-      <p class="description">Talk about line chart here</p>
+      <p class="description">Talk about <p class = "emphasis">line chart</p> here</p>
     </div>
 
     
     <div class="grid-cell">
       <div id="bar" class="plot"></div>
-      <p class="description">Talk about bar chart here</p>
+      <p class="description">Talk about <p class = "emphasis">bar chart</p> here</p>
     </div>
 
     
     <div class="grid-cell">
       <div id="stack" class="plot"></div>
-      <p class="description">Talk about stacked bar chart here</p>
+      <p class="description">Talk about <p class = "emphasis">stacked bar chart</p> here</p>
     </div>
 
     
     <div class="grid-cell">
       <div id="propmap" class="plot"></div>
-      <p class="description">Talk about proportional symbol map here</p>
+      <p class="description">Talk about <p class = "emphasis">proportional symbol map</p> here</p>
     </div>
   </div>
     <script>
