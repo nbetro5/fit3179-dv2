@@ -3,7 +3,7 @@
   "title": {"text": "Australian Car Sales Over Time"},
   "width": 600,
   "height": 600,
-  "data": {"url": //data url goes here},
+  "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/testdatastate.csv", "format": {"type": "csv"}},
   "mark": {
     "type": "line",
     "point": {
@@ -13,7 +13,7 @@
   },
   "encoding": {
     "x": {"timeUnit": "year", "field": "Year", "title": "Year"},
-    "y": {"field": "sales", "type": "quantitative", "title": "Total Sales"},
+    "y": {"field": "Sales", "type": "quantitative", "aggregate": "sum", "title": "Total Sales"},
     "color": {"field": "symbol", "type": "nominal"}
   }
 }

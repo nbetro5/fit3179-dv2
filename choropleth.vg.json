@@ -17,11 +17,11 @@
     },
     {
       "name": "valueType",
-      "value": "Sales per Capita",
+      "value": "Per 10000",
       "bind": {
         "input": "select",
-        "options": ["Total", "per Capita"],
-        "labels": ["Total Sales", "Sales per Capita"]
+        "options": ["Sales", "Per 10000"],
+        "labels": ["Total Sales", "Sales per 10000 People"]
       }
     }
   ],
@@ -30,10 +30,10 @@
     {"filter": "datum.ValueType == valueType"},
     {"lookup": "properties.STATE_NAME",
       "from": {
-        "data": { // replace with github url
+        "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/testdatastate.csv", "format": {"type": "csv"}
   },
   "key": "State",
-  "fields": ["ValueType"]
+  "fields": ["datum.ValueType"]
       }
     }
   ],
@@ -45,14 +45,14 @@
   "mark": {"type": "geoshape"},
     "encoding": {
     "color": {
-    "datum": {"expr": "valueType"},
+    "field": "datum.ValueType",
     "type": "quantitative",
     "scale": {"type": "linear", "range": ["#edf8e9","#bae4b3","#74c476","#31a354","#006d2c"]}
     },
     "tooltip": [
     {"field": "properties.STATE_NAME", "type": "nominal", "title":
     "State"},
-    {"datum": {"expr: "valueType"}, "type": "quantitative", "title": "Sales"}
+    {"field": "datum.ValueType", "type": "quantitative", "title": "Sales"}
     ]
     }
   }

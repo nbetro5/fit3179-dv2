@@ -6,11 +6,11 @@
   "layer": [
     {
       "data": {
-        "url": "data/us-10m.json", // MAP DATA GOES HERE
+        "url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/world-map.json", // MAP DATA GOES HERE
         "format": {"type": "json", "property": "features"}
       },
       "projection": {
-        "type": "equalEarth" // CHECK PROJECTION WIZARD
+        "type": "equalEarth"
       },
       "mark": {
         "type": "geoshape",
@@ -20,8 +20,8 @@
     },
     {
     "data": {
-    "url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/australian-states.json",
-    "format": {"type": "json", "property": "features"}
+    "url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/testdatamake.csv",
+    "format": {"type": "csv"}
   },
       "params": [
     {
@@ -36,20 +36,20 @@
     {"filter": "datum.Year == selectedYear"}
   ],
       "projection": {
-        "type": "equalEarth" // CHECK PROJECTION MATCHES ABOVE
+        "type": "equalEarth" 
       },
       "mark": "circle",
       "encoding": {
         "longitude": {
-          "field": "longitude", // do longs and lats where centre or captial is in sales sheet
+          "field": "lng",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "latitude",
+          "field": "lat",
           "type": "quantitative"
         },
         "size": {"field": "Sales", "type": "quantitative"},
-        "color": {"value": "#0845FF1A"} // change colour here
+        "color": {"value": "#0845FF1A"}
       }
     }
   ]

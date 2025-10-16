@@ -3,7 +3,7 @@
   "title": {"text": "Top 10 Most Popular Car Brands in Australia"},
   "width": 600,
   "height": 600,
-  "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/salesbybrand.csv"}, // data url goes here
+  "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/testdatamake.csv"}, // data url goes here
     "params": [
     {
       "name": "selectedYear",
@@ -26,11 +26,11 @@
       "y": {"field": "Sales", "type": "quantitative", "title": "Units Sold"}
     }
     },
-    {"mark": {"type": "text"}, // USE THIS FOR TEXT ANNOTATIONS
+    {"mark": {"type": "text"},
         "encoding": {
           "x": {"value": 150},
           "y": {"value": 20},
-          "text": {"value": "Toyota is the most popular brand in Australia"}
+          "text": {"value": "Toyota is consistently the most popular brand in Australia"}
         }
     }
   ]
