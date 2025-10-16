@@ -3,15 +3,15 @@
   "title": {"text": "Top 10 Most Popular Car Brands in Australia"},
   "width": 600,
   "height": 600,
-  "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/testdatamake.csv"}, // data url goes here
+  "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/testdatamake.csv", "format": {"type": "csv"}},
     "params": [
     {
       "name": "selectedYear",
-      "value": 2024,
+      "value": 2025,
       "bind": {
         "input": "select",
-        "options": [2024, 2025],
-        "labels": ["2024", "2025"],
+        "options": ["2020", "2021", "2022", "2023", "2024", "2025"],
+        "labels": ["2020", "2021", "2022", "2023", "2024", "2025"],
         "name": "Select Year: "
       }
     }

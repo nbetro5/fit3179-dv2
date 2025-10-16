@@ -3,7 +3,7 @@
   "title": {"text": "Sales by Powerplant"},
   "width": 600,
   "height": 600,
-  "data": {"url": "https:raw.githubusercontent.com/nbetro5/fit3179-dv2/main/pplanttest.csv", "format": {"type": "csv"}},
+  "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/pplanttest.csv", "format": {"type": "csv"}},
   "mark": "bar",
   "encoding": {
     "x": {
@@ -13,8 +13,9 @@
       "title": "Year"
     },
     "y": {
-      "aggregate": "count",
-      "type": "quantitative"
+      "field": "Proportion",
+      "type": "quantitative",
+      "title": "Share of Sales"
     },
     "color": {
       "field": "Powerplant",

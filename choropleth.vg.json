@@ -4,7 +4,7 @@
   "width": 600,
   "height": 600,
   "data": {
-    "url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/australian-states.json",
+    "url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/australian-states.json",
     "format": {"type": "json", "property": "features"}
   },
       "params": [
@@ -14,27 +14,22 @@
       "bind": {
         "input": "range", "min": 2020, "max": 2025, "step": 1
       }
-    },
-    {
-      "name": "valueType",
-      "value": "Per 10000",
-      "bind": {
-        "input": "select",
-        "options": ["Sales", "Per 10000"],
-        "labels": ["Total Sales", "Sales per 10000 People"]
-      }
     }
   ],
   "transform": [
-    {"filter": "datum.Year == selectedYear"},
-    {"filter": "datum.ValueType == valueType"},
-    {"lookup": "properties.STATE_NAME",
+    {
+      "lookup": "properties.STATE_NAME",
       "from": {
-        "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/testdatastate.csv", "format": {"type": "csv"}
-  },
-  "key": "State",
-  "fields": ["datum.ValueType"]
+        "data": {
+          "url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/testdatastate.csv",
+          "format": {"type": "csv"}
+        },
+        "key": "State",
+        "fields": ["Per 10000"]
       }
+    },
+    {
+      "filter": "datum['Per 10000'] != null && datum.Year == selectedYear"
     }
   ],
   "projection": {"type": "albers",
@@ -45,14 +40,14 @@
   "mark": {"type": "geoshape"},
     "encoding": {
     "color": {
-    "field": "datum.ValueType",
+    "field": "Per 10000",
     "type": "quantitative",
     "scale": {"type": "linear", "range": ["#edf8e9","#bae4b3","#74c476","#31a354","#006d2c"]}
     },
     "tooltip": [
     {"field": "properties.STATE_NAME", "type": "nominal", "title":
     "State"},
-    {"field": "datum.ValueType", "type": "quantitative", "title": "Sales"}
+    {"field": "Per 10000", "type": "quantitative", "title": "Sales per 10000 People"}
     ]
     }
   }
