@@ -12,8 +12,7 @@
     }
   },
   "encoding": {
-    "x": {"timeUnit": "year", "field": "Year", "title": "Year"},
-    "y": {"field": "Sales", "type": "quantitative", "aggregate": "sum", "title": "Total Sales"},
-    "color": {"field": "symbol", "type": "nominal"}
+    "x": {"field": "Year", "type": "ordinal", "title": "Year"},
+    "y": {"field": "Sales", "type": "quantitative", "aggregate": "sum", "title": "Total Sales"}
   }
 }

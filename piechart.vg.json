@@ -4,7 +4,7 @@
   "width": 600,
   "height": 600,
   "data": {
-    "url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/testdatamake.csv", "format": {"type": "csv"}
+    "url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/testdatamake.csv", "format": {"type": "csv"}
   },
     "params": [
   {

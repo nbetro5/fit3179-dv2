@@ -14,8 +14,8 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "lightgray",
-        "stroke": "white"
+        "fill": "gray",
+        "stroke": "black"
       }
     },
     {
@@ -26,7 +26,7 @@
       "params": [
     {
       "name": "selectedYear",
-      "value": 2025,
+      "value": "2025",
       "bind": {
         "input": "range", "min": 2020, "max": 2025, "step": 1
       }
