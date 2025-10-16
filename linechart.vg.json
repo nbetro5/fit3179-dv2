@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Stock prices of 5 Tech Companies over Time.",
+  "width": 600,
+  "height": 600,
   "data": {"url": //data url goes here},
   "mark": {
     "type": "line",

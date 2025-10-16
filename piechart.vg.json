@@ -1,12 +1,28 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Pie Chart with percentage_tooltip",
+  "width": 600,
+  "height": 600,
   "data": {
     "url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/salesbybrand.csv" // data url goes here
   },
+    "params": [
+  {
+    "name": "selectedYear",
+    "value": 2024,
+    "bind": {
+      "input": "select",
+      "options": [2020, 2021, 2022, 2023, 2024, 2025],
+      "labels": ["2020", "2021", "2022", "2023", "2024", "2025 (to date)"],
+      "name": "Select Year: "
+    }
+  }
+],
+"transform": [
+  {"filter": "datum.Year == selectedYear"}
+],
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
     "theta": {"field": "Sales", "type": "quantitative", "stack": "normalize", "aggregate": "sum"},
-    "color": {"field": "Make", "type": "nominal"}
+    "color": {"field": "Make", "type": "nominal", "range":[["#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a","#ffff99"]]}
   }
 }

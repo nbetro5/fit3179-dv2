@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "width": 500,
-  "height": 300,
+  "width": 600,
+  "height": 600,
   "layer": [
     {
       "data": {
@@ -9,7 +9,7 @@
         "format": {"type": "json", "property": "features"}
       },
       "projection": {
-        "type": "albersUsa" // CHECK PROJECTION WIZARD
+        "type": "equalEarth" // CHECK PROJECTION WIZARD
       },
       "mark": {
         "type": "geoshape",
@@ -32,24 +32,15 @@
     }
   ],
   "transform": [
-    {"filter": "datum.Year == selectedYear"},
-    {"lookup": "properties.name", // check country name proper
-      "from": {
-        "data": { // replace with country sales data}
-    ]
-  },
-  "key": "State",
-  "fields": ["Sales"]
-      }
-    }
+    {"filter": "datum.Year == selectedYear"}
   ],
       "projection": {
-        "type": "albersUsa" // CHECK PROJECTION MATCHES ABOVE
+        "type": "equalEarth" // CHECK PROJECTION MATCHES ABOVE
       },
       "mark": "circle",
       "encoding": {
         "longitude": {
-          "field": "longitude",
+          "field": "longitude", // do longs and lats where centre or captial is in sales sheet
           "type": "quantitative"
         },
         "latitude": {
@@ -57,7 +48,7 @@
           "type": "quantitative"
         },
         "size": {"field": "Sales", "type": "quantitative"},
-        "color": {"value": "steelblue"} // change colour here
+        "color": {"value": "#0845FF1A"} // change colour here
       }
     }
   ]

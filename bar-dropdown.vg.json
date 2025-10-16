@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "width": 400,
-  "height": 250,
+  "width": 600,
+  "height": 600,
   "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/salesbybrand.csv"}, // data url goes here
     "params": [
     {
