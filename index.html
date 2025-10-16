@@ -1,0 +1,26 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head> <!-- header stuff shouldn't need to change-->
+
+<body>
+    <div> <p> The Changing Landscape of Australian Car Sales </p></div> <!--Title font-->
+    <div> <p> Introductory Paragraph </p></div>
+    <div id="map"></div>
+    <div id="pie"></div>
+    <div id="line"></div>
+    <div id="bar"></div>
+    <div id="stacked"></div>
+    <div id="propmap"></div>
+    <div> <p>[footnote placeholder] </p></div>
+    <script>
+        vegaEmbed("#map","CHORPLETH URL")
+        vegaEmbed("#pie","PIE CHART URL")
+        vegaEmbed("#line","line CHART URL")
+        vegaEmbed("#bar","bar CHART URL")
+        vegaEmbed("#stacked","stacked bar CHART URL")
+        vegaEmbed("#propmap","PROPORTIONAL SYMBOL URL")
+    </script>
+</body>

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 400,
+  "height": 250,
+  "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/salesbybrand.csv"}, // data url goes here
+    "params": [
+    {
+      "name": "selectedYear",
+      "value": 2024,
+      "bind": {
+        "input": "select",
+        "options": [2024, 2025],
+        "labels": ["2024", "2025"],
+        "name": "Select Year: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Year == selectedYear"}
+  ],
+  "layer":[
+    {"mark": {"type": "bar", "tooltip": true},
+    "encoding": {
+      "x": {"field": "Make", "type": "nominal", "sort": "-y", "title": "Car Make"},
+      "y": {"field": "Sales", "type": "quantitative", "title": "Units Sold"}
+    }
+    },
+    {"mark": {"type": "text"}, // USE THIS FOR TEXT ANNOTATIONS
+        "encoding": {
+          "x": {"value": 150},
+          "y": {"value": 20},
+          "text": {"value": "Toyota is the most popular brand in Australia"}
+        }
+    }
+  ],
+  "title": {"text": "Top 10 Most Popular Car Brands in Australia"}
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Pie Chart with percentage_tooltip",
+  "data": {
+    "url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/salesbybrand.csv" // data url goes here
+  },
+  "mark": {"type": "arc", "tooltip": true},
+  "encoding": {
+    "theta": {"field": "Sales", "type": "quantitative", "stack": "normalize", "aggregate": "sum"},
+    "color": {"field": "Make", "type": "nominal"}
+  }
+}

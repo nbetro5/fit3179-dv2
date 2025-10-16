@@ -7,16 +7,30 @@
     "url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/australian-states.json",
     "format": {"type": "json", "property": "features"}
   },
-  "projection": {"type": "albers",
-  "rotate": [-132.8906, 0, 0],
-  "center": [0, -27.4422],
-  "parallels": [-39.2069, -15.6778],
-  "scale": 1000},
-  "transform": [
+      "params": [
     {
-      "lookup": "properties.STATE_NAME",
+      "name": "selectedYear",
+      "value": 2025,
+      "bind": {
+        "input": "range", "min": 2020, "max": 2025, "step": 1
+      }
+    },
+    {
+      "name": "valueType",
+      "value": "Sales per Capita",
+      "bind": {
+        "input": "select",
+        "options": ["Total", "per Capita"],
+        "labels": ["Total Sales", "Sales per Capita"]
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Year == selectedYear"},
+    {"filter": "datum.ValueType == valueType"},
+    {"lookup": "properties.STATE_NAME",
       "from": {
-        "data": {
+        "data": { // replace with github url
         "values": [
           {"State":"Australian Capital Territory","Sales":1413},
           {"State":"New South Wales","Sales":32177},
@@ -33,7 +47,12 @@
       }
     }
   ],
-      "mark": {"type": "geoshape"},
+  "projection": {"type": "albers",
+  "rotate": [-132.8906, 0, 0],
+  "center": [0, -27.4422],
+  "parallels": [-39.2069, -15.6778],
+  "scale": 1000},
+  "mark": {"type": "geoshape"},
     "encoding": {
     "color": {
     "field": "Sales",

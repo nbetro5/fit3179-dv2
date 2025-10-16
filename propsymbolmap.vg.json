@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 500,
+  "height": 300,
+  "layer": [
+    {
+      "data": {
+        "url": "data/us-10m.json", // MAP DATA GOES HERE
+        "format": {"type": "json", "property": "features"}
+      },
+      "projection": {
+        "type": "albersUsa" // CHECK PROJECTION WIZARD
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white"
+      }
+    },
+    {
+    "data": {
+    "url": "https://raw.githubusercontent.com/nbetro5/fit3179/main/australian-states.json",
+    "format": {"type": "json", "property": "features"}
+  },
+      "params": [
+    {
+      "name": "selectedYear",
+      "value": 2025,
+      "bind": {
+        "input": "range", "min": 2020, "max": 2025, "step": 1
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Year == selectedYear"},
+    {"lookup": "properties.name", // check country name proper
+      "from": {
+        "data": { // replace with country sales data}
+    ]
+  },
+  "key": "State",
+  "fields": ["Sales"]
+      }
+    }
+  ],
+      "projection": {
+        "type": "albersUsa" // CHECK PROJECTION MATCHES ABOVE
+      },
+      "mark": "circle",
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {"field": "Sales", "type": "quantitative"},
+        "color": {"value": "steelblue"} // change colour here
+      }
+    }
+  ]
+}
