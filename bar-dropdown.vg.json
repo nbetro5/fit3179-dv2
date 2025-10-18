@@ -4,13 +4,16 @@
   "width": 600,
   "height": 500,
   "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/testdatamake.csv", "format": {"type": "csv"}},
-    "params": [
+  "params": [
     {
       "name": "selectedYear",
       "value": 2025,
       "bind": {
-      "input": "range", "min": 2020, "max": 2025, "step": 1,
-      "name": "Select Year: "
+        "input": "range",
+        "min": 2020,
+        "max": 2025,
+        "step": 1,
+        "name": "Select Year:"
       }
     }
   ],
@@ -20,8 +23,19 @@
   "layer":[
     {"mark": {"type": "bar", "tooltip": true},
     "encoding": {
-      "x": {"field": "Make", "type": "nominal", "sort": "-y", "title": "Car Make"},
-      "y": {"field": "Sales", "type": "quantitative", "title": "Units Sold"}
+      "x": {"field": "Make", "type": "nominal", "sort": "-y", "title": "Car Make",
+      "axis": {
+        "labelFont": "Arial",
+        "labelFontSize": 12,
+        "titleFont": "Arial",
+        "titleFontSize": 14
+      }},
+      "y": {"field": "Sales", "type": "quantitative", "title": "Units Sold", "axis": {
+        "labelFont": "Arial",
+        "labelFontSize": 12,
+        "titleFont": "Arial",
+        "titleFontSize": 14
+      }}
     }
     },
     {"mark": {"type": "text"},

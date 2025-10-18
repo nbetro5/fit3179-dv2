@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "A simple donut chart with embedded data.",
+  "width": 300,
+    "height": 300,
+  "data": {
+    "url": //data url
+  },
+    "layer":[
+    {"mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "Sales", "type": "quantitative"},
+    "color": {"field": "Country", "type": "nominal", "legend":{
+        "title": "Country of Origin",
+        "titleFont": "Arial",
+        "titleFontSize": 14,
+        "labelFont": "Arial",
+        "labelFontSize": 10}
+    }
+  }
+    },
+    {"mark": {"type": "text"},
+        "encoding": {
+          "x": {"value": 150},
+          "y": {"value": 150},
+          "text": {"value": "PLACEHOLDER TEXT"}
+        }
+    }
+  ]
+}

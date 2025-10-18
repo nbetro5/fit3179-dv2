@@ -74,7 +74,13 @@
           "type": "quantitative",
           "title": "Sales per 10000 People",
           "scale": {"range": ["#edf8e9","#bae4b3","#74c476","#31a354","#006d2c"]},
-          "legend": {"format": ".2s"}
+        "legend":{
+        "title": "Sales per 10000 People",
+        "titleFont": "Arial",
+        "titleFontSize": 14,
+        "labelFont": "Arial",
+        "labelFontSize": 10,
+        "format": ".2s"}
         },
         "tooltip": [
           {"field": "State", "type": "nominal", "title": "State"},
