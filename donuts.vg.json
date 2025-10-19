@@ -7,6 +7,7 @@
   },
   "hconcat":[
   {"width": "container",
+  "height": "container",
     "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
   "encoding": {
     "theta": {"field": "2015Share", "type": "quantitative"},
@@ -24,6 +25,7 @@
   }
 },
   {"width": "container",
+  "height": "container",
   "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
   "encoding": {
   "theta": {"field": "2024Share", "type": "quantitative"},

@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "New Car Sales by State in Australia",
   "width": "container",
-  
+  "height": "container",
   "params": [
     {
       "name": "selectedYear",
