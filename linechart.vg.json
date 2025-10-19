@@ -35,9 +35,7 @@
         "encoding": {
           "x": {"value": 400},
           "y": {"value": 200},
-          "text": {"value": "2020: Sales dip to their lowest since 2003 due to COVID-19 pandemic."},
-          "fontWeight": "normal",
-          "fontSize": 10
+          "text": {"value": "2020: Sales dip to their lowest since 2003 due to COVID-19 pandemic."}
         }
     }
     ]
