@@ -33,7 +33,7 @@
       }},
       "y": {"field": "Sales", "type": "quantitative", "title": "Units Sold", "axis": {
         "labelFont": "Arial",
-        "labelFontSize": 12,
+        "labelFontSize": 10,
         "titleFont": "Arial",
         "titleFontSize": 14
       }}
