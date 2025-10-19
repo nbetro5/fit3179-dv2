@@ -22,10 +22,17 @@
         font-size: 36px;
         font-weight: "bold";
     }
-    .poster-grid {
+    .main-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, auto);
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 0px;
+    }
+
+    .bottom-grid{
+      display: grid;
+      grid-template-columns: repeat(2fr, 1fr);
+      grid-template-rows: repeat(1fr);
       gap: 0px;
     }
 
@@ -59,26 +66,30 @@
 <body>
 
   <div class = "title-cell"><h1>The Changing Landscape of Australian Car Sales</h1></div>
-  <div class = "title-cell"><h2>From Imports to Powerplants, Let's Explore</h2></div>
+  <div class = "title-cell"><h2>Explaining the Aussie Car Market</h2></div>
   <div class = "title-cell"><p class="description">Introductory paragraph</p></div>
 
   <div class="poster-grid">
     
     <div class="grid-cell">
       <div id="map" class="plot"></div>
-      <p class="description">Talk about choropleth map here</p>
     </div>
 
     
     <div class="grid-cell">
-      <div id="pie" class="plot"></div>
-      <p class="description">Talk about pie chart here</p>
+      <div><p class="description">How have sales evolved in Australia?</p></div>
+      
     </div>
 
     
     <div class="grid-cell">
       <div id="line" class="plot"></div>
-      <p class="description">Talk about line chart here</p>
+    </div>
+
+    <div class="grid-cell">
+      <div>
+        <p class="description">How have the cars evolved?</p>
+      </div>
     </div>
 
     
@@ -93,10 +104,15 @@
       <p class="description">Talk about stacked bar chart here</p>
     </div>
 
-    
-    <div class="grid-cell">
-      <div id="propmap" class="plot"></div>
-      <p class="description">Talk about proportional symbol map here</p>
+  </div>
+  <div class = "bottom-grid">
+    <div class = "grid-cell">
+      <div id = "donuts" class = "plot"></div>
+    </div>
+  </div>
+    <div class = "bottom-grid">
+    <div class = "grid-cell">
+      <p>Where are the cars from?</p>
     </div>
   </div>
   <div>
@@ -105,7 +121,7 @@
   </div>
     <script>
         vegaEmbed("#map","https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/choropleth.vg.json")
-        vegaEmbed("#pie","https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/piechart.vg.json")
+        vegaEmbed("##donuts","https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/piechart.vg.json")
         vegaEmbed("#line","https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/linechart.vg.json")
         vegaEmbed("#bar","https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/bar-dropdown.vg.json")
         vegaEmbed("#stacked","https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/stackedbar.vg.json")
