@@ -21,8 +21,13 @@
       "type": "nominal",
       "scale": {
         "domain": ["EV", "Hybrid", "ICE"],
-        "range": ["#a6cee3","#1f78b4","#b2df8a"]
+        "range": ["#a6cee3","#1f78b4","#61471f"]
       }
-    }
+    },
+    "tooltip": [
+        {"field": "Powerplant", "type": "nominal"},
+        {"field": "Proportion", "type": "quantitative", "title": "Percentage of Sales"},
+        {"field": "Sales", "type": "quantitative", "title": "Number of Cars", "format": ","}
+      ]
   }
 }

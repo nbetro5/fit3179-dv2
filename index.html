@@ -24,15 +24,15 @@
     }
     .main-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, auto);
+      grid-template-columns: repeat(3, 2fr, 2fr, 1fr);
+      grid-template-rows: repeat(2, 2fr);
       gap: 0px;
     }
 
     .bottom-grid{
       display: grid;
       grid-template-columns: repeat(2, 2fr, 1fr);
-      grid-template-rows: repeat(1fr);
+      grid-template-rows: repeat(2fr);
       gap: 0px;
     }
 
@@ -95,13 +95,11 @@
     
     <div class="grid-cell">
       <div id="bar" class="plot"></div>
-      <p class="description">Talk about bar chart here</p>
     </div>
 
     
     <div class="grid-cell">
       <div id="stacked" class="plot"></div>
-      <p class="description">Talk about stacked bar chart here</p>
     </div>
 
   </div>
