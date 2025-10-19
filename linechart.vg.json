@@ -1,8 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": {"text": "Australian Car Since 2020"},
-  "width": 600,
-  "height": 600,
+  "width": "container",
   "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/states.csv", "format": {"type": "csv"}},
   "mark": {
     "type": "line",

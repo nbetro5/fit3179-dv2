@@ -6,7 +6,8 @@
     "url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/countrydonut.csv", "format": {"type": "csv"}
   },
   "hconcat":[
-  {"mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+  {"width": "container",
+    "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
   "encoding": {
     "theta": {"field": "2015Share", "type": "quantitative"},
     "color": {"field": "2015Country", "type": "nominal", "legend":{
@@ -22,7 +23,8 @@
         ]
   }
 },
-  {"mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+  {"width": "container",
+  "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
   "encoding": {
   "theta": {"field": "2024Share", "type": "quantitative"},
   "color": {"field": "2024Country", "type": "nominal", "legend":{
