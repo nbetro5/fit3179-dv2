@@ -7,11 +7,11 @@
   "params": [
     {
       "name": "selectedYear",
-      "value": 2025,
+      "value": 2024,
       "bind": {
         "input": "range",
-        "min": 2020,
-        "max": 2025,
+        "min": 2019,
+        "max": 2024,
         "step": 1,
         "name": "Select Year:"
       }
@@ -46,7 +46,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/testdatastate.csv",
+        "url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/states.csv",
         "format": {"type": "csv"}
       },
       "transform": [
@@ -70,7 +70,7 @@
       "encoding": {
         "shape": {"field": "geo", "type": "geojson"},
         "color": {
-          "field": "Per10000",
+          "field": "Per 10000",
           "type": "quantitative",
           "title": "Sales per 10000 People",
           "scale": {"range": ["#edf8e9","#bae4b3","#74c476","#31a354","#006d2c"]},
@@ -84,7 +84,7 @@
         },
         "tooltip": [
           {"field": "State", "type": "nominal", "title": "State"},
-          {"field": "Per10000", "type": "quantitative", "title": "Sales per 10000 People"},
+          {"field": "Per 10000", "type": "quantitative", "title": "Sales per 10000 People"},
           {"field": "Year", "type": "quantitative", "title": "Year"}
         ]
       }

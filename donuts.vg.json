@@ -1,30 +1,42 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "A simple donut chart with embedded data.",
-  "width": 300,
-    "height": 300,
+  "title": "Where do Australians' New Cars Come From? (2015 vs 2024)",
   "data": {
-    "url": //data url
+    "url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/countrydonut.csv", "format": {"type": "csv"}
   },
-    "layer":[
-    {"mark": {"type": "arc", "innerRadius": 50},
+  "hconcat":[
+  {"mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
   "encoding": {
-    "theta": {"field": "Sales", "type": "quantitative"},
-    "color": {"field": "Country", "type": "nominal", "legend":{
+    "theta": {"field": "2015Share", "type": "quantitative"},
+    "color": {"field": "2015Country", "type": "nominal", "legend":{
         "title": "Country of Origin",
         "titleFont": "Arial",
         "titleFontSize": 14,
         "labelFont": "Arial",
         "labelFontSize": 10}
-    }
-  }
     },
-    {"mark": {"type": "text"},
-        "encoding": {
-          "x": {"value": 150},
-          "y": {"value": 150},
-          "text": {"value": "PLACEHOLDER TEXT"}
-        }
+    "tooltip": [
+          {"field": "2015Country", "type": "nominal", "title": "Country"},
+          {"field": "2015Share", "type": "quantitative", "title": "% of Total Sales"}
+        ]
+  }
+},
+  {"mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+  "encoding": {
+  "theta": {"field": "2024Share", "type": "quantitative"},
+  "color": {"field": "2024Country", "type": "nominal", "legend":{
+      "title": "Country of Origin",
+      "titleFont": "Arial",
+      "titleFontSize": 14,
+      "labelFont": "Arial",
+      "labelFontSize": 10}
+  },
+  "tooltip": [
+      {"field": "2024Country", "type": "nominal", "title": "Country"},
+      {"field": "2024Share", "type": "quantitative", "title": "% of Total Sales"}
+    ]
+  }
     }
   ]
 }

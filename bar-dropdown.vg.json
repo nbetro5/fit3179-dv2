@@ -3,7 +3,7 @@
   "title": {"text": "Top 10 Most Popular Car Brands in Australia"},
   "width": 600,
   "height": 500,
-  "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/testdatamake.csv", "format": {"type": "csv"}},
+  "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/makes.csv", "format": {"type": "csv"}},
   "params": [
     {
       "name": "selectedYear",
@@ -27,6 +27,7 @@
       "axis": {
         "labelFont": "Arial",
         "labelFontSize": 12,
+        "labelAngle": 0,
         "titleFont": "Arial",
         "titleFontSize": 14
       }},
