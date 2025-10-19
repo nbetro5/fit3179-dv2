@@ -4,7 +4,8 @@
   "width": "container",
   "height": "container",
   "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/states.csv", "format": {"type": "csv"}},
-  "mark": {
+  "layer":[
+  {"mark": {
     "type": "line",
     "point": {
       "filled": false,
@@ -28,5 +29,14 @@
         {"field": "Year", "type": "quantitative", "title": "Year"},
         {"field": "Sales", "type": "quantitative", "aggregate": "sum", "title": "Total Sales", "format": ","}
       ]
+    }
+  },
+    {"mark": {"type": "text"},
+        "encoding": {
+          "x": {"value": 150},
+          "y": {"value": 20},
+          "text": {"value": "2020: Sales dip to their lowest since 2003 due to COVID-19 pandemic."}
+        }
+    }
+    ]
   }
-}
