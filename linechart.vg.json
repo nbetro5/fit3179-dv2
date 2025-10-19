@@ -3,6 +3,8 @@
   "title": {"text": "Australian Car Since 2020"},
   "width": "container",
   "height": "container",
+  "background": "#EDE8D0",
+  "view": {"fill": "transparent"},
   "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/states.csv", "format": {"type": "csv"}},
   "layer":[
   {"mark": {
@@ -33,8 +35,8 @@
   },
     {"mark": {"type": "text"},
         "encoding": {
-          "x": {"value": 400},
-          "y": {"value": 200},
+          "x": {"value": 300},
+          "y": {"value": 150},
           "text": {"value": "2020: Sales dip to their lowest since 2003 due to COVID-19 pandemic."}
         }
     }

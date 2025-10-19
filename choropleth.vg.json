@@ -3,6 +3,8 @@
   "title": "New Car Sales by State in Australia",
   "width": "container",
   "height": "container",
+  "background": "#EDE8D0",
+  "view": {"fill": "transparent"},
   "params": [
     {
       "name": "selectedYear",

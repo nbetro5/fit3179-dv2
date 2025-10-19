@@ -3,6 +3,8 @@
   "title": {"text": "Sales by Powerplant"},
   "width": "container",
   "height": "container",
+  "background": "#EDE8D0",
+  "view": {"fill": "transparent"},
   "data": {"url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/pplant.csv", "format": {"type": "csv"}},
   "mark": "bar",
   "encoding": {
