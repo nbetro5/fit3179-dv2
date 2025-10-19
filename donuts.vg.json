@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "A simple donut chart with embedded data.",
   "title": "Where do Australians' New Cars Come From? (2015 vs 2024)",
-  "autosize": {"type": "fit", "contains": "padding"},
+  "autosize": {"type": "fit"},
   "data": {
     "url": "https://raw.githubusercontent.com/nbetro5/fit3179-dv2/main/countrydonut.csv", "format": {"type": "csv"}
   },
